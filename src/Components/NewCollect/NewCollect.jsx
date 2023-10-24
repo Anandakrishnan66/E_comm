@@ -1,0 +1,31 @@
+import React from 'react'
+import './newcollect.css'
+ 
+import new_collections from '../Assets/new_collections'
+import Item from '../items/items'
+const NewCollect = () => {//Newcolleciton spage
+  return (
+    <div className='newcollections'>
+
+         <h1>New Collections</h1>
+
+           <hr/>
+
+           <div className="collections">
+
+            {new_collections.map((item,i)=>{
+                return <Item  key={i} id={item.id} image={item.image}
+                
+                new_price={item.new_price}
+                old_price={item.old_price}
+                />
+
+            })}
+
+           </div>
+
+    </div>
+  )
+}
+
+export default NewCollect
